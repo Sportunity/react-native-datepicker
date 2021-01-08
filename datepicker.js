@@ -273,7 +273,7 @@ class DatePicker extends Component {
 
         let timeMoment = Moment(this.state.date);
 
-        TimePickerAndroid.open({
+        DateTimePicker.open({
           hour: timeMoment.hour(),
           minute: timeMoment.minutes(),
           is24Hour: is24Hour,

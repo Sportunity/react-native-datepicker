@@ -272,13 +272,13 @@ class DatePicker extends Component {
         // 选时间
 
         let timeMoment = Moment(this.state.date);
-
-        DateTimePicker.open({
-          hour: timeMoment.hour(),
-          minute: timeMoment.minutes(),
-          is24Hour: is24Hour,
-          mode: androidMode
-        }).then(this.onTimePicked);
+        this.setState({isPicker: true})
+        // DateTimePicker.open({
+        //   hour: timeMoment.hour(),
+        //   minute: timeMoment.minutes(),
+        //   is24Hour: is24Hour,
+        //   mode: androidMode
+        // }).then(this.onTimePicked);
       } else if (mode === 'datetime') {
         // 选日期和时间
 

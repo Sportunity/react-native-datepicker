@@ -290,7 +290,7 @@ class DatePicker extends Component {
             locale={locale}
             confirmTextIOS={confirmBtnText}
             cancelTextIOS={cancelBtnText}
-            date={date}
+            date={date || this.state.date}
             minuteInterval={5}
             display={androidMode} 
           />

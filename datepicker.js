@@ -156,7 +156,7 @@ class DatePicker extends Component {
   }
 
   datePicked() {
-    this.setState({modalVisible: false})
+    this.setModalVisible(false)
 
     if (typeof this.props.onDateChange === 'function') {
       this.props.onDateChange(this.getDateStr(this.state.date), this.state.date);
@@ -284,7 +284,7 @@ class DatePicker extends Component {
             isVisible={this.state.modalVisible}
             mode={mode}
             onConfirm={this.onDatetimeTimePicked}
-            onCancel={() => this.setState({modalVisible: false})}
+            onCancel={() => this.setModalVisible(false)}
             minimumDate={minDate && this.getDate(minDate)}
             is24Hour={is24Hour}
             locale={locale}

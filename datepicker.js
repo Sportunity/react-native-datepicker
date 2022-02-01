@@ -238,6 +238,7 @@ class DatePicker extends Component {
     const {
       mode,
       style,
+      date,
       customStyles,
       disabled,
       is24Hour = true,
@@ -289,7 +290,7 @@ class DatePicker extends Component {
             locale={locale}
             confirmTextIOS={confirmBtnText}
             cancelTextIOS={cancelBtnText}
-            date={this.state.date}
+            date={date}
             minuteInterval={5}
             display={androidMode} 
           />

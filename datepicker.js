@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import Style from './style';
 import Moment from 'moment';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 const FORMATS = {
   'date': 'YYYY-MM-DD',

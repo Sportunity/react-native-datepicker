@@ -40,7 +40,6 @@ class DatePicker extends Component {
     this.onPressDate = this.onPressDate.bind(this);
     this.onPressCancel = this.onPressCancel.bind(this);
     this.onPressConfirm = this.onPressConfirm.bind(this);
-    this.onDateChange = this.onDateChange.bind(this);
     this.onPressMask = this.onPressMask.bind(this);
     this.setModalVisible = this.setModalVisible.bind(this);
   }

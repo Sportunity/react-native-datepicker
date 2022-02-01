@@ -180,7 +180,7 @@ class DatePicker extends Component {
     );
   }
 
-  onDatetimeTimePicked = (event, time) => {
+  onDatetimeTimePicked = (time) => {
     if (time === undefined) {
       this.setState({ isPicker: false });
     } else {

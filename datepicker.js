@@ -157,6 +157,8 @@ class DatePicker extends Component {
   }
 
   datePicked() {
+    this.setState({isDatePickerVisible: false})
+
     if (typeof this.props.onDateChange === 'function') {
       this.props.onDateChange(this.getDateStr(this.state.date), this.state.date);
     }
@@ -177,19 +179,6 @@ class DatePicker extends Component {
         {this.getDateStr()}
       </Text>
     );
-  }
-
-  onDateChange(event, date) {
-    this.setState({
-      allowPointerEvents: false,
-      date: date
-    });
-    const timeoutId = setTimeout(() => {
-      this.setState({
-        allowPointerEvents: true
-      });
-      clearTimeout(timeoutId);
-    }, 200);
   }
 
   onDatetimeTimePicked = (event, time) => {
@@ -252,6 +241,7 @@ class DatePicker extends Component {
       style,
       customStyles,
       disabled,
+      is24Hour = true,
       minDate,
       maxDate,
       minuteInterval,
@@ -290,6 +280,24 @@ class DatePicker extends Component {
           
           {this._renderIcon()}
 
+          <DateTimePickerModal
+            isVisible={this.state.modalVisible}
+            mode={mode}
+            onConfirm={this.onDatetimeTimePicked}
+            onCancel={() => this.setState({isDatePickerVisible: false})}
+            minimumDate={minDate && this.getDate(minDate)}
+            is24Hour={is24Hour}
+            locale={locale}
+            confirmTextIOS={confirmBtnText}
+            cancelTextIOS={cancelBtnText}
+            date={this.state.date}
+            minuteInterval={5}
+            display={androidMode} 
+          />
+          
+          
+{/*           
+          
           {Platform.OS === 'ios' && 
             <Modal
               transparent={true}
@@ -368,7 +376,7 @@ class DatePicker extends Component {
               display={androidMode} 
             /> 
           : null
-          }
+          } */}
         </View>
       </TouchableComponent>
     );

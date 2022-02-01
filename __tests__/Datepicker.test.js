@@ -1,5 +1,6 @@
 import React from 'react';
-import {Platform, Animated, DatePickerAndroid, Modal, View} from 'react-native';
+import {Platform, Animated, Modal, View} from 'react-native';
+import {DatePickerAndroid} from '@react-native-community/datetimepicker';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Moment from 'moment';

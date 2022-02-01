@@ -6,15 +6,13 @@ import {
   Image,
   Modal,
   TouchableHighlight,
-  DatePickerAndroid,
-  DatePickerIOS,
   Platform,
   Animated,
   Keyboard
 } from 'react-native';
 import Style from './style';
 import Moment from 'moment';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePicker, {DatePickerAndroid, DatePickerIOS} from '@react-native-community/datetimepicker';
 
 const FORMATS = {
   'date': 'YYYY-MM-DD',
